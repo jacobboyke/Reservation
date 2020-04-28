@@ -193,6 +193,64 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="_Archive\hesed-master\about.html" />
+    <Content Include="_Archive\hesed-master\android-chrome-192x192.png" />
+    <Content Include="_Archive\hesed-master\android-chrome-512x512.png" />
+    <Content Include="_Archive\hesed-master\apple-touch-icon.png" />
+    <Content Include="_Archive\hesed-master\connect-group.html" />
+    <Content Include="_Archive\hesed-master\contact.html" />
+    <Content Include="_Archive\hesed-master\css\base.css" />
+    <Content Include="_Archive\hesed-master\css\main.css" />
+    <Content Include="_Archive\hesed-master\events-single.html" />
+    <Content Include="_Archive\hesed-master\events.html" />
+    <Content Include="_Archive\hesed-master\favicon-16x16.png" />
+    <Content Include="_Archive\hesed-master\favicon-32x32.png" />
+    <Content Include="_Archive\hesed-master\favicon.ico" />
+    <Content Include="_Archive\hesed-master\images\avatars\user-01.jpg" />
+    <Content Include="_Archive\hesed-master\images\avatars\user-02.jpg" />
+    <Content Include="_Archive\hesed-master\images\avatars\user-03.jpg" />
+    <Content Include="_Archive\hesed-master\images\avatars\user-04.jpg" />
+    <Content Include="_Archive\hesed-master\images\avatars\user-05.jpg" />
+    <Content Include="_Archive\hesed-master\images\avatars\user-06.jpg" />
+    <Content Include="_Archive\hesed-master\images\header-bgs\about-header-bg-2000.jpg" />
+    <Content Include="_Archive\hesed-master\images\header-bgs\connect-header-bg-2000.jpg" />
+    <Content Include="_Archive\hesed-master\images\header-bgs\contact-header-bg-2000.jpg" />
+    <Content Include="_Archive\hesed-master\images\header-bgs\events-header-bg-2000.jpg" />
+    <Content Include="_Archive\hesed-master\images\header-bgs\volunteer-header-bg-2000.jpg" />
+    <Content Include="_Archive\hesed-master\images\hero-bg-3000.jpg" />
+    <Content Include="_Archive\hesed-master\images\icons\icon-arrow-left.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\icon-arrow-right.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\icon-calendar.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\icon-location.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\icon-quote.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\icon-time.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\podcast\icon-apple.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\podcast\icon-podcast.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\podcast\icon-soundcloud.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\podcast\icon-spotify.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\podcast\icon-youtube.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\social\icon-email.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\social\icon-facebook.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\social\icon-instagram.svg" />
+    <Content Include="_Archive\hesed-master\images\icons\social\icon-twitter.svg" />
+    <Content Include="_Archive\hesed-master\images\logo.svg" />
+    <Content Include="_Archive\hesed-master\images\pattern.jpg" />
+    <Content Include="_Archive\hesed-master\images\sample-image.jpg" />
+    <Content Include="_Archive\hesed-master\images\series-2000.jpg" />
+    <Content Include="_Archive\hesed-master\images\thumbs\events\event-1000.jpg" />
+    <Content Include="_Archive\hesed-master\images\thumbs\events\event-2000.jpg" />
+    <Content Include="_Archive\hesed-master\images\thumbs\events\event-500.jpg" />
+    <Content Include="_Archive\hesed-master\images\wheel-1000.jpg" />
+    <Content Include="_Archive\hesed-master\images\wheel-2000.jpg" />
+    <Content Include="_Archive\hesed-master\images\wheel-500.jpg" />
+    <Content Include="_Archive\hesed-master\index.html" />
+    <Content Include="_Archive\hesed-master\js\jquery-3.2.1.min.js" />
+    <Content Include="_Archive\hesed-master\js\main.js" />
+    <Content Include="_Archive\hesed-master\js\modernizr.js" />
+    <Content Include="_Archive\hesed-master\js\plugins.js" />
+    <Content Include="_Archive\hesed-master\readme.txt" />
+    <Content Include="_Archive\hesed-master\styles.html" />
+    <Content Include="_Archive\hesed-master\volunteer.html" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -251,6 +309,7 @@
     <Content Include="Views\RolesAdmin\Delete.cshtml" />
     <Content Include="Views\RolesAdmin\Create.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="_Archive\hesed-master\site.webmanifest" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -269,8 +328,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Reservations.DATA.EF\Reservations.DATA.EF.csproj">
-      <Project>{928ce0b4-b79a-497c-9368-c3b4a2b436a6}</Project>
+    <ProjectReference Include="..\Reservations.DATA.EF\Reservations.DATA.EF.csproj">
+      <Project>{f61b176f-3059-4b4a-a6ac-3e8448a1f82b}</Project>
       <Name>Reservations.DATA.EF</Name>
     </ProjectReference>
   </ItemGroup>

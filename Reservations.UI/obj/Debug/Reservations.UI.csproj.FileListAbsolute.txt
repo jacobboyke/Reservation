@@ -103,3 +103,6 @@ C:\Users\Student\Documents\Visual Studio 2015\Projects\12_PROJECT\Reservation\sr
 C:\Users\Student\Documents\Visual Studio 2015\Projects\12_PROJECT\Reservation\src\Reservations.UI\obj\Debug\Reservations.UI.csproj.CopyComplete
 C:\Users\Student\Documents\Visual Studio 2015\Projects\12_PROJECT\Reservation\src\Reservations.UI\obj\Debug\Reservations.UI.dll
 C:\Users\Student\Documents\Visual Studio 2015\Projects\12_PROJECT\Reservation\src\Reservations.UI\obj\Debug\Reservations.UI.pdb
+C:\Users\Student\Documents\Visual Studio 2015\Projects\12_PROJECT\Reservation\src\Reservations.UI\bin\Reservations.DATA.EF.dll
+C:\Users\Student\Documents\Visual Studio 2015\Projects\12_PROJECT\Reservation\src\Reservations.UI\bin\Reservations.DATA.EF.pdb
+C:\Users\Student\Documents\Visual Studio 2015\Projects\12_PROJECT\Reservation\src\Reservations.UI\bin\Reservations.DATA.EF.dll.config
