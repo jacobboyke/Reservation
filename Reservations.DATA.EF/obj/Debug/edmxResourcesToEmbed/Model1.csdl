@@ -60,7 +60,7 @@
     <NavigationProperty Name="UserDetail" Relationship="Self.FK_UserDetails_AspNetUsers" FromRole="AspNetUsers" ToRole="UserDetails" />
     <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
   </EntityType>
-  <EntityType Name="Location">
+  <EntityType Name="Locations">
     <Key>
       <PropertyRef Name="LocationId" />
     </Key>
@@ -73,7 +73,7 @@
     <Property Name="ReservationLimit" Type="Byte" Nullable="false" />
     <NavigationProperty Name="Reservations" Relationship="Self.FK_Reservations_Locations" FromRole="Locations" ToRole="Reservations" />
   </EntityType>
-  <EntityType Name="OwnerAsset">
+  <EntityType Name="OwnerAssets">
     <Key>
       <PropertyRef Name="OwnerAssetId" />
     </Key>
@@ -108,7 +108,7 @@
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
-  <EntityType Name="UserDetail">
+  <EntityType Name="UserDetails">
     <Key>
       <PropertyRef Name="UserId" />
     </Key>
@@ -148,7 +148,7 @@
   </Association>
   <Association Name="FK_UserDetails_AspNetUsers">
     <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1" />
-    <End Role="UserDetails" Type="Self.UserDetail" Multiplicity="0..1" />
+    <End Role="UserDetails" Type="ReservationModel.UserDetails" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="AspNetUsers">
         <PropertyRef Name="Id" />
@@ -159,8 +159,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Reservations_Locations">
-    <End Role="Locations" Type="Self.Location" Multiplicity="1" />
-    <End Role="Reservations" Type="Self.Reservation" Multiplicity="*" />
+    <End Role="Locations" Type="ReservationModel.Locations" Multiplicity="1" />
+    <End Role="Reservations" Type="ReservationModel.Reservation" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Locations">
         <PropertyRef Name="LocationId" />
@@ -171,8 +171,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OwnerAssets_UserDetails">
-    <End Role="UserDetails" Type="Self.UserDetail" Multiplicity="1" />
-    <End Role="OwnerAssets" Type="Self.OwnerAsset" Multiplicity="*" />
+    <End Role="UserDetails" Type="ReservationModel.UserDetails" Multiplicity="1" />
+    <End Role="OwnerAssets" Type="ReservationModel.OwnerAssets" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserDetails">
         <PropertyRef Name="UserId" />
@@ -183,8 +183,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Reservations_OwnerAssets">
-    <End Role="OwnerAssets" Type="Self.OwnerAsset" Multiplicity="1" />
-    <End Role="Reservations" Type="Self.Reservation" Multiplicity="*" />
+    <End Role="OwnerAssets" Type="ReservationModel.OwnerAssets" Multiplicity="1" />
+    <End Role="Reservations" Type="ReservationModel.Reservation" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="OwnerAssets">
         <PropertyRef Name="OwnerAssetId" />
@@ -204,11 +204,11 @@
     <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
     <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
     <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
-    <EntitySet Name="Locations" EntityType="Self.Location" />
-    <EntitySet Name="OwnerAssets" EntityType="Self.OwnerAsset" />
-    <EntitySet Name="Reservations" EntityType="Self.Reservation" />
+    <EntitySet Name="Locations1" EntityType="ReservationModel.Locations" />
+    <EntitySet Name="OwnerAssets1" EntityType="ReservationModel.OwnerAssets" />
+    <EntitySet Name="Reservations" EntityType="ReservationModel.Reservation" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="UserDetails" EntityType="Self.UserDetail" />
+    <EntitySet Name="UserDetails1" EntityType="ReservationModel.UserDetails" />
     <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
@@ -219,18 +219,18 @@
     </AssociationSet>
     <AssociationSet Name="FK_UserDetails_AspNetUsers" Association="Self.FK_UserDetails_AspNetUsers">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-      <End Role="UserDetails" EntitySet="UserDetails" />
+      <End Role="UserDetails" EntitySet="UserDetails1" />
     </AssociationSet>
     <AssociationSet Name="FK_Reservations_Locations" Association="Self.FK_Reservations_Locations">
-      <End Role="Locations" EntitySet="Locations" />
+      <End Role="Locations" EntitySet="Locations1" />
       <End Role="Reservations" EntitySet="Reservations" />
     </AssociationSet>
     <AssociationSet Name="FK_OwnerAssets_UserDetails" Association="Self.FK_OwnerAssets_UserDetails">
-      <End Role="UserDetails" EntitySet="UserDetails" />
-      <End Role="OwnerAssets" EntitySet="OwnerAssets" />
+      <End Role="UserDetails" EntitySet="UserDetails1" />
+      <End Role="OwnerAssets" EntitySet="OwnerAssets1" />
     </AssociationSet>
     <AssociationSet Name="FK_Reservations_OwnerAssets" Association="Self.FK_Reservations_OwnerAssets">
-      <End Role="OwnerAssets" EntitySet="OwnerAssets" />
+      <End Role="OwnerAssets" EntitySet="OwnerAssets1" />
       <End Role="Reservations" EntitySet="Reservations" />
     </AssociationSet>
     <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">

@@ -17,7 +17,12 @@ namespace Reservations.DATA.EF/*.Metadata*/
         [DisplayFormat(DataFormatString = "{0:d}")]
         public System.DateTime ReservationDate { get; set; }
     }
-    
+    [MetadataType (typeof(ReservationsMetadata))]
+    public partial class Reservation
+    {
+
+    }
+
     public class LocationsMetadata
     {
         //public int LocationId { get; set; }
@@ -46,6 +51,11 @@ namespace Reservations.DATA.EF/*.Metadata*/
         //[Display(Name = "Reservation Limit")]
         //public byte ReservationLimit { get; set; }
     }
+    [MetadataType(typeof(LocationsMetadata))]
+    public partial class Locations
+    {
+
+    }
 
     public class OwnerAssetsMetadata
     {
@@ -65,6 +75,7 @@ namespace Reservations.DATA.EF/*.Metadata*/
         [DisplayFormat(NullDisplayText = "[-N/A-]")]
         [Display(Name = "Notes")]
         [StringLength(300, ErrorMessage = "* Value must be 300 characters or less.")]
+        [UIHint("MultilineText")]
         public string SpecialNotes { get; set; }
 
         [Display(Name = "Active")]
@@ -73,6 +84,11 @@ namespace Reservations.DATA.EF/*.Metadata*/
         [Display(Name = "Date Joined")]
         [DisplayFormat(DataFormatString = "{0:d}")]
         public System.DateTime DateAdded { get; set; }
+    }
+    [MetadataType(typeof(OwnerAssetsMetadata))]
+    public partial class OwnerAssets
+    {
+
     }
 
     public class UserDetailsMetadata
@@ -89,7 +105,6 @@ namespace Reservations.DATA.EF/*.Metadata*/
         [StringLength(50, ErrorMessage = "* Value must be 50 characters or less.")]
         public string LastName { get; set; }
     }
-
     [MetadataType(typeof(UserDetailsMetadata))]
     public partial class UserDetails
     {

@@ -56,8 +56,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Locations">
-      <EntityTypeMapping TypeName="ReservationModel.Location">
+    <EntitySetMapping Name="Locations1">
+      <EntityTypeMapping TypeName="ReservationModel.Locations">
         <MappingFragment StoreEntitySet="Locations">
           <ScalarProperty Name="LocationId" ColumnName="LocationId" />
           <ScalarProperty Name="LocationName" ColumnName="LocationName" />
@@ -69,8 +69,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="OwnerAssets">
-      <EntityTypeMapping TypeName="ReservationModel.OwnerAsset">
+    <EntitySetMapping Name="OwnerAssets1">
+      <EntityTypeMapping TypeName="ReservationModel.OwnerAssets">
         <MappingFragment StoreEntitySet="OwnerAssets">
           <ScalarProperty Name="OwnerAssetId" ColumnName="OwnerAssetId" />
           <ScalarProperty Name="AssetName" ColumnName="AssetName" />
@@ -103,8 +103,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="UserDetails">
-      <EntityTypeMapping TypeName="ReservationModel.UserDetail">
+    <EntitySetMapping Name="UserDetails1">
+      <EntityTypeMapping TypeName="ReservationModel.UserDetails">
         <MappingFragment StoreEntitySet="UserDetails">
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Reservations.DATA.EF;
 
 namespace Reservations.UI.Controllers
 {
@@ -153,11 +154,27 @@ namespace Reservations.UI.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking this link: <a href=\"" + callbackUrl + "\">link</a>");
-                    ViewBag.Link = callbackUrl;
-                    return View("DisplayEmail");
+                    UserManager.AddToRole(user.Id, "Customer");
+
+                    //var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    //await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking this link: <a href=\"" + callbackUrl + "\">link</a>");
+                    //ViewBag.Link = callbackUrl;
+                    //return View("DisplayEmail");
+
+                    #region Adding UserDetails record & sending user to Log in
+                    UserDetails newUserDetails = new UserDetails();
+                    newUserDetails.UserId = user.Id;//use ASPNet record's PK for our UserDetails PK
+                    newUserDetails.FirstName = model.FirstName;
+                    newUserDetails.LastName = model.LastName;
+
+                    ReservationEntities db = new ReservationEntities();//access to db thru EF
+                    
+                    db.UserDetails1.Add(newUserDetails);//lining up this db transaction
+                    db.SaveChanges();//actually add the record (do all queued transactions)
+
+                    return View("Login");//immediately go login with new account
+                    #endregion
                 }
                 AddErrors(result);
             }

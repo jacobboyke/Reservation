@@ -357,7 +357,7 @@
           <NavigationProperty Name="UserDetail" Relationship="Self.FK_OwnerAssets_UserDetails" FromRole="OwnerAssets" ToRole="UserDetails" />
           <NavigationProperty Name="Reservations" Relationship="Self.FK_Reservations_OwnerAssets" FromRole="OwnerAssets" ToRole="Reservations" />
         </EntityType>
-        <EntityType Name="Reservations">
+        <EntityType Name="Reservation">
           <Key>
             <PropertyRef Name="ReservationId" />
           </Key>
@@ -430,7 +430,7 @@
         </Association>
         <Association Name="FK_Reservations_Locations">
           <End Role="Locations" Type="ReservationModel.Locations" Multiplicity="1" />
-          <End Role="Reservations" Type="ReservationModel.Reservations" Multiplicity="*" />
+          <End Role="Reservations" Type="ReservationModel.Reservation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Locations">
               <PropertyRef Name="LocationId" />
@@ -454,7 +454,7 @@
         </Association>
         <Association Name="FK_Reservations_OwnerAssets">
           <End Role="OwnerAssets" Type="ReservationModel.OwnerAssets" Multiplicity="1" />
-          <End Role="Reservations" Type="ReservationModel.Reservations" Multiplicity="*" />
+          <End Role="Reservations" Type="ReservationModel.Reservation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="OwnerAssets">
               <PropertyRef Name="OwnerAssetId" />
@@ -476,7 +476,7 @@
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
           <EntitySet Name="Locations1" EntityType="ReservationModel.Locations" />
           <EntitySet Name="OwnerAssets1" EntityType="ReservationModel.OwnerAssets" />
-          <EntitySet Name="Reservations1" EntityType="ReservationModel.Reservations" />
+          <EntitySet Name="Reservations" EntityType="ReservationModel.Reservation" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="UserDetails1" EntityType="ReservationModel.UserDetails" />
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
@@ -493,7 +493,7 @@
           </AssociationSet>
           <AssociationSet Name="FK_Reservations_Locations" Association="Self.FK_Reservations_Locations">
             <End Role="Locations" EntitySet="Locations1" />
-            <End Role="Reservations" EntitySet="Reservations1" />
+            <End Role="Reservations" EntitySet="Reservations" />
           </AssociationSet>
           <AssociationSet Name="FK_OwnerAssets_UserDetails" Association="Self.FK_OwnerAssets_UserDetails">
             <End Role="UserDetails" EntitySet="UserDetails1" />
@@ -501,7 +501,7 @@
           </AssociationSet>
           <AssociationSet Name="FK_Reservations_OwnerAssets" Association="Self.FK_Reservations_OwnerAssets">
             <End Role="OwnerAssets" EntitySet="OwnerAssets1" />
-            <End Role="Reservations" EntitySet="Reservations1" />
+            <End Role="Reservations" EntitySet="Reservations" />
           </AssociationSet>
           <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
             <End Role="AspNetRoles" EntitySet="AspNetRoles" />
@@ -595,8 +595,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Reservations1">
-            <EntityTypeMapping TypeName="ReservationModel.Reservations">
+          <EntitySetMapping Name="Reservations">
+            <EntityTypeMapping TypeName="ReservationModel.Reservation">
               <MappingFragment StoreEntitySet="Reservations">
                 <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
                 <ScalarProperty Name="OwnerAssetId" ColumnName="OwnerAssetId" />

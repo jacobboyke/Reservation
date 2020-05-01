@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Reservations.DATA.EF.OwnerAssets>
+
+@{
+    ViewBag.Title = "Account";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssetPhoto)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.SpecialNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateAdded)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.UserDetail.FullName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetPhoto)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.SpecialNotes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateAdded)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.UserDetail.FullName)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.OwnerAssetId })
+            </td>
+            @if (User.IsInRole("Admin, Customer"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OwnerAssetId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OwnerAssetId })
+                </td>
+            }
+        </tr>
+    }
+
+</table>

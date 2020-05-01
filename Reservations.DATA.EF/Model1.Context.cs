@@ -32,7 +32,7 @@ namespace Reservations.DATA.EF
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Locations> Locations1 { get; set; }
         public virtual DbSet<OwnerAssets> OwnerAssets1 { get; set; }
-        public virtual DbSet<Reservations> Reservations1 { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<UserDetails> UserDetails1 { get; set; }
     }

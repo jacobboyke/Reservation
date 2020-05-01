@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="ReservationModel.AspNetUser" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ReservationModel.Locations" Width="1.5" PointX="12.25" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ReservationModel.OwnerAssets" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ReservationModel.Reservations" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReservationModel.Reservation" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ReservationModel.sysdiagram" Width="1.5" PointX="0.875" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ReservationModel.UserDetails" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
         <AssociationConnector Association="ReservationModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
