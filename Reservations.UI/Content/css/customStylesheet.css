@@ -1,8 +1,41 @@
-﻿p {
+﻿p 
+{
+    color:white;
+}
+
+th, td{
     color: white;
 }
 
-section#about
-{
-    background-color: white;
+dt{
+    color: white; 
 }
+
+dd {
+    color:white;
+}
+
+h2{
+    color:white;
+}
+
+
+#main {
+    background-color: #0b0b0b;
+}
+
+.hero-content__buttons .btn {
+    display: block;
+    border-color: #ffffff;
+    color: #ffffff;
+    width: 30rem;
+    margin-right: 0;
+}
+
+.btn--stroke, button.btn--stroke {
+    background: transparent !important;
+    border: 0.2rem solid #000000;
+    color: #000000;
+}
+
+

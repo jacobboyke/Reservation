@@ -6,12 +6,12 @@
 
 <h2>@ViewBag.Title</h2>
 
-@if (User.IsInRole("Admin"))
-{
+
+
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
-}
+
 <table class="table">
     <tr>
         <th>
@@ -42,7 +42,9 @@
                 @Html.DisplayFor(modelItem => item.AssetName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AssetPhoto)
+                @*@Html.DisplayFor(modelItem => item.AssetPhoto)*@
+                <img src="~/Content/assetimages/@item.AssetPhoto" style="max-width: 100px;" alt="Asset Photo"
+                     title="@item.AssetName" />
             </td>
             @*<td>
                     @Html.DisplayFor(modelItem => item.SpecialNotes)
@@ -59,7 +61,7 @@
             <td>
                 @Html.ActionLink("Details", "Details", new { id = item.OwnerAssetId })
             </td>
-            @if (User.IsInRole("Admin, Customer"))
+            @if (User.IsInRole("Admin") || User.IsInRole("Customer"))
             {
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.OwnerAssetId }) |

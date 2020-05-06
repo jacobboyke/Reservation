@@ -125,7 +125,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #3b0d11;
+  color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
 
@@ -194,6 +194,7 @@ h2,
 .h2 {
   font-size: 3.2rem;
   line-height: 1.25;
+  color: white;
 }
 
 h3, .h3 {
@@ -456,7 +457,7 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #3b0d11;
+  color: #ffffff;
 }
 
 dd {
@@ -781,7 +782,7 @@ select {
   padding: 1.8rem 0 1.5rem;
   border: 0;
   outline: none;
-  color: #000000;
+  color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 3.2rem;
@@ -859,7 +860,7 @@ legend {
   font-size: 1.4rem;
   margin-bottom: .8rem;
   line-height: 1.714;
-  color: #000000;
+  color: #ffffff;
   display: block;
 }
 
@@ -940,7 +941,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #3b0d11;
+  -webkit-text-fill-color: #ffffff;
   transition: background-color 5000s ease-in-out 0s;
 }
 

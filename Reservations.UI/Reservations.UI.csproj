@@ -189,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\android-chrome-512x512.png" />
+    <Content Include="Content\assetimages\Dad-Stick-Figure-66-Vinyl-Decal-Sticker__89087.1506200684.jpg" />
+    <Content Include="Content\assetimages\noImage.jpeg" />
+    <Content Include="Content\assetimages\staff.gif" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -196,7 +199,7 @@
     <Content Include="Content\css\base.css" />
     <Content Include="Content\css\customStylesheet.css" />
     <Content Include="Content\css\main.css" />
-    <Content Include="Content\images\A-bunch-of-players-playing-paintball.png" />
+    <Content Include="Content\images\Paintball-main-photo.jpg" />
     <Content Include="Content\images\avatars\user-01.jpg" />
     <Content Include="Content\images\avatars\user-02.jpg" />
     <Content Include="Content\images\avatars\user-03.jpg" />

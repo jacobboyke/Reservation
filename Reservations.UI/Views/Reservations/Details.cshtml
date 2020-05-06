@@ -39,7 +39,7 @@
 <p>
     @if (User.IsInRole("Admin"))
     {
-        @Html.ActionLink("Edit", "Edit", new { id = Model.LocationId })
+        @Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) 
     }
     @Html.ActionLink("Back to List", "Index")
 </p>
